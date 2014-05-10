@@ -1768,10 +1768,10 @@ public class KeyguardHostView extends KeyguardViewBase {
 
         PowerManager mPM = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mWakeLock = mPM.newWakeLock(PowerManager.FULL_WAKE_LOCK |
-            PowerManager.ACQUIRE_CAUSES_WAKEUP, 
+            PowerManager.ACQUIRE_CAUSES_WAKEUP,
             "NFCUnlockerKeyguardWakeup");
-        
-        BroadcastReceiver receiver = new BroadcastReceiver() { 
+
+        BroadcastReceiver receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (INTENT_UNLOCK_DEVICE.equals(intent.getAction())) {
